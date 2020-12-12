@@ -13,12 +13,13 @@ from sklearn import tree
 def actualisation(train_test, creator):
     result_model = None  # Оверрайтнется энивей
     max_acc = 0
-    # dump_this("StochasticGradientDescent", train_test, lambda params: GradientBoostingClassifier(n_estimators=params['n_estimators'],
-    # learning_rate=params['learning_rate'], subsample=params['subsample'], max_depth=params['max_depth'], loss=params['loss']))
-    # SGDClassifier(loss="hinge", penalty="l2", max_iter=5)
-    # 'hinge', 'log', 'modified_huber',
-    #         'squared_hinge', 'perceptron', or a regression loss: 'squared_loss',
-    #         'huber', 'epsilon_insensitive', or 'squared_epsilon_insensitive'.
+    # dump_this("StochasticGradientDescent", train_test, lambda params: GradientBoostingClassifier(
+    # n_estimators=params['n_estimators'],
+    # learning_rate=params['learning_rate'],
+    # subsample=params['subsample'],
+    # max_depth=params['max_depth'],
+    # loss=params['loss']))
+
 
     for loss in ['deviance', 'exponential']:
         for max_depth in (1, 10):
